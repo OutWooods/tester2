@@ -10,7 +10,8 @@
 
      <form id="formy"  >
        <input type="text" id="texty">
-       <button type="submit" id="buttony"></button>
+       <button type="submit" value="Submit" id="buttony"></button>
+       <p id="content">My favourite animal is</p>
      </form>
 
      <script>
@@ -20,8 +21,13 @@
        else {console.log('doesn\'t')}
      }
 
+     document.addEventListener("click", function(clickEvent) {
+          clickEvent.preventDefault();
+     })
+
      function fillInForm(id, string) {
        document.getElementById(id).value = string
+       console.log("test");
      }
 
      function clickButton(id) {
@@ -29,18 +35,23 @@
      }
 
      function hasContent(id, string) {
-       document.getElementById(id).innerHTML.include() = string;
+       document.getElementById(id).innerHTML.includes(string);
      }
+
+
 
      test();
      fillInForm("texty", "My favourite animal");
-     // clickButton("buttony");
+     hasContent("content", "My favourite animal is");
+     clickButton("buttony");
+
+
+
+
+
 
     //how do you test things in the model
       </script>
 
   </body>
 </html>
-
-
-//
