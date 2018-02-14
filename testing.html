@@ -8,13 +8,33 @@
   <body>
    <p id='m'> hello <p>
 
+     <form id="formy"  >
+       <input type="text" id="texty">
+       <button type="submit" id="buttony"></button>
+     </form>
+
      <script>
      function test() {
        if(document.getElementById('m').innerHTML.includes('hello'))
        {console.log('works')}
        else {console.log('doesn\'t')}
      }
+
+     function fillInForm(id, string) {
+       document.getElementById(id).value = string
+     }
+
+     function clickButton(id) {
+       document.getElementById(id).click();
+     }
+
+     function hasContent(id, string) {
+       document.getElementById(id).innerHTML.include() = string;
+     }
+
      test();
+     fillInForm("texty", "My favourite animal");
+     // clickButton("buttony");
 
     //how do you test things in the model
       </script>
